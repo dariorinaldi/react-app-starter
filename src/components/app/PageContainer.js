@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import routes from '../../routes';
 import { Route } from 'react-router';
 
-const PageContainer = () => {
-  const renderLinks = routes.map((r) => <Route path={r.path} component={r.component} />);
+const PageContainer = ({ routes }) => {
+  const renderRoutes = Object.keys(routes).map((r) => (
+    <Route key={r} path={routes[r].path} component={routes[r].component} />
+  ));
 
-  return <>{renderLinks()}</>;
+  return <>{renderRoutes}</>;
 };
 
 export default PageContainer;
