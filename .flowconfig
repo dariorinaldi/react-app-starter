@@ -1,0 +1,15 @@
+[ignore]
+./node_modules
+./dist
+./coverage
+./src/assets
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
